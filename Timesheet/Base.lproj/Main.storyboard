@@ -4,7 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
-        <!--Table View Controller - Root View Controller-->
+        <!--Table View Controller - Cients-->
         <scene sceneID="Ill-9I-R5G">
             <objects>
                 <tableViewController id="clf-U4-1Kr" sceneMemberID="viewController">
@@ -27,11 +27,61 @@
                             <outlet property="delegate" destination="clf-U4-1Kr" id="XYY-Ya-s2D"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="Wjp-RT-Re3"/>
+                    <navigationItem key="navigationItem" title="Cients" id="Wjp-RT-Re3">
+                        <barButtonItem key="leftBarButtonItem" systemItem="edit" id="eGT-yP-0i0"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="UJA-2y-98O">
+                            <connections>
+                                <segue destination="m39-rj-I54" kind="push" id="TlM-nt-bXx"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2ZF-Ie-nlD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="506" y="-18"/>
+        </scene>
+        <!--View Controller - New Client-->
+        <scene sceneID="NXg-Rb-61f">
+            <objects>
+                <viewController id="m39-rj-I54" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="GQ1-v2-XfD"/>
+                        <viewControllerLayoutGuide type="bottom" id="KTB-z2-iV9"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Idq-PE-f8m">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder=" Client Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IaJ-VT-mDD">
+                                <rect key="frame" x="0.0" y="71" width="320" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder=" Rate $0.00" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="81N-8X-BR8">
+                                <rect key="frame" x="0.0" y="112" width="320" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EkY-xw-oLF">
+                                <rect key="frame" x="109" y="170" width="102" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Add Client">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="New Client" id="i1Q-g7-qpe">
+                        <barButtonItem key="rightBarButtonItem" systemItem="cancel" id="7LD-eO-36x"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uTc-7r-G5q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="935" y="-18"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="b1S-JS-dUd">
