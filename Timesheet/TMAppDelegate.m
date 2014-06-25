@@ -9,7 +9,9 @@
 #import "TMAppDelegate.h"
 
 @implementation TMAppDelegate
-
+{
+    NSMutableArray *_players;
+}
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
         [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];

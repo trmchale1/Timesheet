@@ -2,7 +2,7 @@
 //  TMViewController.m
 //  Timesheet
 //
-//  Created by Tim McHale on 6/24/14.
+//  Created by Tim McHale on 6/25/14.
 //  Copyright (c) 2014 Tim McHale. All rights reserved.
 //
 
@@ -14,15 +14,20 @@
 
 @implementation TMViewController
 
-- (void)viewDidLoad
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
-    [self setNeedsStatusBarAppearanceUpdate];
-    [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) {
+        // Custom initialization
+    }
+    return self;
 }
 
--(UIStatusBarStyle)preferredStatusBarStyle{
-    return UIStatusBarStyleLightContent;
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    // Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning
@@ -30,5 +35,6 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 
 @end

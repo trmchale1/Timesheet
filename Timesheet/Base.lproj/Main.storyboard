@@ -7,7 +7,7 @@
         <!--Table View Controller - Cients-->
         <scene sceneID="Ill-9I-R5G">
             <objects>
-                <tableViewController id="clf-U4-1Kr" sceneMemberID="viewController">
+                <tableViewController id="clf-U4-1Kr" customClass="TMTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Wv6-Xw-3Sw">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -43,7 +43,7 @@
         <!--View Controller - New Client-->
         <scene sceneID="NXg-Rb-61f">
             <objects>
-                <viewController id="m39-rj-I54" sceneMemberID="viewController">
+                <viewController id="m39-rj-I54" customClass="TMViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="GQ1-v2-XfD"/>
                         <viewControllerLayoutGuide type="bottom" id="KTB-z2-iV9"/>
@@ -62,7 +62,7 @@
                                 <rect key="frame" x="0.0" y="112" width="320" height="42"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EkY-xw-oLF">
                                 <rect key="frame" x="109" y="170" width="102" height="30"/>
@@ -71,6 +71,9 @@
                                 <state key="normal" title="Add Client">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="addClient:" destination="m39-rj-I54" eventType="touchUpInside" id="xB5-lX-UG7"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -78,6 +81,11 @@
                     <navigationItem key="navigationItem" title="New Client" id="i1Q-g7-qpe">
                         <barButtonItem key="rightBarButtonItem" systemItem="cancel" id="7LD-eO-36x"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="addClient" destination="EkY-xw-oLF" id="H65-Zk-RCv"/>
+                        <outlet property="clientName" destination="IaJ-VT-mDD" id="lzm-ce-2ek"/>
+                        <outlet property="rate" destination="81N-8X-BR8" id="CAq-hK-BjH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uTc-7r-G5q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

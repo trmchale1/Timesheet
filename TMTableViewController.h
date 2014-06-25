@@ -1,5 +1,5 @@
 //
-//  TMViewController.h
+//  TMTableViewController.h
 //  Timesheet
 //
 //  Created by Tim McHale on 6/25/14.
@@ -8,7 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TMViewController : UIViewController
-
+@interface TMTableViewController : UITableViewController
 
 @end
